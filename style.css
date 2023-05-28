@@ -30,4 +30,85 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url(./assets/bg-mobile-light.jpg);
+  background-size: cover;
+}
+
+body.dark {
+  background-image: url(./assets/bg-mobile-dark.jpg);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  padding-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img {
+  width: 11.2rem;
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+  border: solid 2px var(--stroke-color-light-mode);
+}
+
+body.dark header img {
+  border: solid 2px var(--stroke-color-dark-mode);
+}
+
+#git-login {
+  margin-bottom: 2.4rem;
+}
+
+#git-login a {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+  color: var(--text-color-light-mode);
+}
+
+body.dark #git-login a {
+  color: var(--text-color-dark-mode);
+}
+
+.switch {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.switch #light,
+.switch #dark {
+  background-color: #ffffff;
+  width: fit-content;
+  box-shadow: 0px 2px 8px var(--highlight-color-light-mode);
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+
+body.dark .switch #dark {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.025);
+}
+
+header .switch #track rect {
+  fill: var(--surface-color-light-mode);
+  stroke: var(--stroke-color-light-mode);
+}
+
+body.dark header .switch #track rect {
+  fill: var(--surface-color-dark-mode);
+  stroke: var(--stroke-color-dark-mode);
 }
