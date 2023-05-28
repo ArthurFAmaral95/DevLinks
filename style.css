@@ -90,17 +90,43 @@ body.dark #git-login a {
   align-items: center;
 }
 
-.switch #light,
-.switch #dark {
+.switch #light-dark {
   background-color: #ffffff;
-  width: fit-content;
+  width: 3.2rem;
+  height: 3.2rem;
   box-shadow: 0px 2px 8px var(--highlight-color-light-mode);
   border-radius: 50%;
-  padding: 0.8rem;
+
+  background-image: url(./assets/light.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+  left: -1.6rem;
+
+  transition: all 0.5s;
 }
 
-body.dark .switch #dark {
+/*.switch #light-dark:hover,
+body.dark .switch #light-dark:hover {
+  border: 8px solid var(--highlight-color-light-mode);
+}*/
+
+body.dark .switch #light-dark {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.025);
+  background-image: url(./assets/dark.svg);
+  left: 1.6rem;
+}
+
+/*body.dark .switch #light-dark:hover {
+  border: 8px solid var(--highlight-color-dark-mode);
+  box-shadow: 0px 2px 8px var(--highlight-color-light-mode);
+}*/
+
+.switch #track {
+  position: absolute;
+  z-index: -1;
+  left: calc(50vw - 3.2rem);
 }
 
 header .switch #track rect {
@@ -111,4 +137,8 @@ header .switch #track rect {
 body.dark header .switch #track rect {
   fill: var(--surface-color-dark-mode);
   stroke: var(--stroke-color-dark-mode);
+}
+
+main {
+  padding: 4rem;
 }
