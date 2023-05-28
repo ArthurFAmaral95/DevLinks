@@ -37,6 +37,8 @@ body {
 
   background-image: url(./assets/bg-mobile-light.jpg);
   background-size: cover;
+
+  transition: background 1s;
 }
 
 body.dark {
