@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --text-color-dark-mode: rgb(255, 255, 255);
+  --text-color-light-mode: rgb(0, 0, 0);
+
+  --stroke-color-dark-mode: rgba(255, 255, 255, 0.5);
+  --stroke-color-light-mode: rgba(0, 0, 0, 0.5);
+
+  --surface-color-dark-mode: rgba(255, 255, 255, 0.1);
+  --surface-color-dark-mode-hover: rgba(255, 255, 255, 0.05);
+  --surface-color-light-mode: rgba(0, 0, 0, 0.05);
+  --surface-color-light-mode-hover: rgba(0, 0, 0, 0.02);
+
+  --highlight-color-dark-mode: rgba(255, 255, 255, 0.2);
+  --highlight-color-light-mode: rgba(0, 0, 0, 0.1);
+}
+
+body,
+html {
+  min-width: 36rem;
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
