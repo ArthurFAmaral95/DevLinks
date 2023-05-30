@@ -4,7 +4,6 @@ const login = document.querySelector('#git-login a')
 const body = document.querySelector('body')
 const gitLink = document.querySelector('#git-link')
 const switchDarkLight = document.querySelector('#light-dark')
-const button = document.querySelector('button')
 
 fetch(url)
   .then(response => response.json())

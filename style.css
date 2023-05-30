@@ -203,3 +203,19 @@ body.dark li a {
 body.dark .social-links li a path {
   fill: var(--text-color-dark-mode);
 }
+
+@media (min-width: 600px) {
+  body {
+    background-image: url(./assets/bg-desktop-light.jpg);
+  }
+
+  body.dark {
+    background-image: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  header,
+  main,
+  footer {
+    width: 58.8rem;
+  }
+}
