@@ -188,3 +188,18 @@ body.dark .links li {
 body.dark li a {
   color: var(--text-color-dark-mode);
 }
+
+.social-links {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  padding: 2.4rem 0;
+}
+
+.social-links li a path {
+  fill: var(--text-color-light-mode);
+}
+
+body.dark .social-links li a path {
+  fill: var(--text-color-dark-mode);
+}
