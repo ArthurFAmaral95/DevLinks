@@ -103,6 +103,7 @@ body.dark #git-login a {
   width: 3.2rem;
   height: 3.2rem;
   box-shadow: 0px 2px 8px var(--highlight-color-light-mode);
+
   border-radius: 50%;
 
   background-image: url(./assets/light.svg);
@@ -115,21 +116,11 @@ body.dark #git-login a {
   transition: all 0.5s;
 }
 
-/*.switch #light-dark:hover,
-body.dark .switch #light-dark:hover {
-  border: 8px solid var(--highlight-color-light-mode);
-}*/
-
 body.dark .switch #light-dark {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.025);
   background-image: url(./assets/dark.svg);
   left: 1.6rem;
 }
-
-/*body.dark .switch #light-dark:hover {
-  border: 8px solid var(--highlight-color-dark-mode);
-  box-shadow: 0px 2px 8px var(--highlight-color-light-mode);
-}*/
 
 .switch #track {
   position: absolute;
@@ -159,7 +150,16 @@ main {
   width: 100%;
 }
 
-.links li {
+.links li a {
+  color: var(--text-color-light-mode);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: #ffffff;
   background-color: var(--surface-color-light-mode);
 
@@ -167,33 +167,54 @@ main {
   border-radius: 0.8rem;
 
   height: 5.6rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-body.dark .links li {
+.links li a:hover {
+  background-color: var(--surface-color-light-mode-hover);
+  border: 1.5px solid var(--text-color-light-mode);
+}
+
+body.dark .links li a {
+  color: var(--text-color-dark-mode);
   background-color: var(--surface-color-dark-mode);
   border: 1px solid var(--stroke-color-dark-mode);
+
+  transition: background 0.3s;
 }
 
-.links li a {
-  color: var(--text-color-light-mode);
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  font-weight: 500;
-}
-
-body.dark li a {
-  color: var(--text-color-dark-mode);
+body.dark .links li a:hover {
+  background-color: var(--surface-color-dark-mode-hover);
+  border: 1.5px solid var(--text-color-dark-mode);
 }
 
 .social-links {
   display: flex;
-  gap: 1.6rem;
+
   justify-content: center;
   padding: 2.4rem 0;
+}
+
+.social-links li {
+  padding: 0.8rem;
+}
+
+.social-links li a {
+  padding: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  transition: background 0.3s;
+}
+
+.social-links li a:hover {
+  background-color: var(--highlight-color-light-mode);
+}
+
+body.dark .social-links li a:hover {
+  background-color: var(--highlight-color-dark-mode);
 }
 
 .social-links li a path {
