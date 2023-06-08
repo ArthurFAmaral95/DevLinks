@@ -113,13 +113,21 @@ body.dark #git-login a {
   position: relative;
   left: -1.6rem;
 
-  transition: all 0.5s;
+  transition: all 0.2s;
+}
+
+.switch #light-dark:hover {
+  outline: 0.8rem solid var(--highlight-color-light-mode);
 }
 
 body.dark .switch #light-dark {
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.025);
   background-image: url(./assets/dark.svg);
   left: 1.6rem;
+}
+
+body.dark .switch #light-dark:hover {
+  outline: 0.8rem solid var(--highlight-color-dark-mode);
 }
 
 .switch #track {
